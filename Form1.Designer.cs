@@ -51,7 +51,7 @@ namespace labGUI1
             this.button_solution.TabIndex = 0;
             this.button_solution.Text = "Решить";
             this.button_solution.UseVisualStyleBackColor = false;
-            this.button_solution.Click += new System.EventHandler(this.button1_Click);
+            this.button_solution.Click += new System.EventHandler(this.button_solution_Click);
             // 
             // Word1
             // 
@@ -100,7 +100,6 @@ namespace labGUI1
             this.label_answer.TabIndex = 6;
             this.label_answer.Text = "Ответ: ";
             this.label_answer.Visible = false;
-            this.label_answer.Click += new System.EventHandler(this.label_answer_Click);
             // 
             // task
             // 
