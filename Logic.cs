@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace labGUI1
+﻿namespace labGUI1
 {
     class Logic
     {

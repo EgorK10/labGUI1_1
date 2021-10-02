@@ -37,6 +37,7 @@ namespace labGUI1
             this.label2 = new System.Windows.Forms.Label();
             this.label_answer = new System.Windows.Forms.Label();
             this.task = new System.Windows.Forms.Label();
+            this.button_clear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_solution
@@ -45,7 +46,7 @@ namespace labGUI1
             this.button_solution.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_solution.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button_solution.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_solution.Location = new System.Drawing.Point(0, 324);
+            this.button_solution.Location = new System.Drawing.Point(0, 351);
             this.button_solution.Name = "button_solution";
             this.button_solution.Size = new System.Drawing.Size(520, 59);
             this.button_solution.TabIndex = 0;
@@ -57,6 +58,7 @@ namespace labGUI1
             // 
             this.Word1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Word1.Location = new System.Drawing.Point(243, 171);
+            this.Word1.MaxLength = 18;
             this.Word1.Name = "Word1";
             this.Word1.Size = new System.Drawing.Size(205, 27);
             this.Word1.TabIndex = 1;
@@ -65,6 +67,7 @@ namespace labGUI1
             // 
             this.Word2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Word2.Location = new System.Drawing.Point(243, 221);
+            this.Word2.MaxLength = 18;
             this.Word2.Name = "Word2";
             this.Word2.Size = new System.Drawing.Size(205, 27);
             this.Word2.TabIndex = 2;
@@ -95,6 +98,7 @@ namespace labGUI1
             this.label_answer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label_answer.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_answer.Location = new System.Drawing.Point(153, 274);
+            this.label_answer.MaximumSize = new System.Drawing.Size(280, 50);
             this.label_answer.Name = "label_answer";
             this.label_answer.Size = new System.Drawing.Size(73, 20);
             this.label_answer.TabIndex = 6;
@@ -116,13 +120,27 @@ namespace labGUI1
             this.task.Text = resources.GetString("task.Text");
             this.task.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // button_clear
+            // 
+            this.button_clear.BackColor = System.Drawing.SystemColors.Info;
+            this.button_clear.BackgroundImage = global::labGUI1.Properties.Resources.bucket;
+            this.button_clear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_clear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_clear.Location = new System.Drawing.Point(454, 186);
+            this.button_clear.Name = "button_clear";
+            this.button_clear.Size = new System.Drawing.Size(45, 44);
+            this.button_clear.TabIndex = 8;
+            this.button_clear.UseVisualStyleBackColor = false;
+            this.button_clear.Click += new System.EventHandler(this.button_clear_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(520, 383);
+            this.ClientSize = new System.Drawing.Size(520, 410);
+            this.Controls.Add(this.button_clear);
             this.Controls.Add(this.task);
             this.Controls.Add(this.label_answer);
             this.Controls.Add(this.label2);
@@ -135,6 +153,8 @@ namespace labGUI1
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,6 +169,7 @@ namespace labGUI1
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label_answer;
         private System.Windows.Forms.Label task;
+        private System.Windows.Forms.Button button_clear;
     }
 }
 
