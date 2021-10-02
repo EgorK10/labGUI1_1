@@ -17,5 +17,14 @@ namespace labGUI1
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            label_answer.Visible = true;
+        }
+
+        private void label_answer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
