@@ -1,6 +1,6 @@
 ﻿namespace labGUI1
 {
-    class Logic
+    public class Logic
     {
         public static string Solution(string word2, string unicchar)
         {

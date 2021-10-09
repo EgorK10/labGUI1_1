@@ -11,6 +11,7 @@ namespace labGUI1
             InitializeComponent();
         }
 
+        //Ввод слов и вывод ответа,а также вывод сообщения об ошибке
         private void button_solution_Click(object sender, EventArgs e)
         {
             if (Word1.Text.Length == 0)
@@ -26,6 +27,7 @@ namespace labGUI1
             }
         }
 
+        //Сохранение при закрытии программы
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Properties.Settings.Default.Word1 = Word1.Text;
@@ -33,16 +35,20 @@ namespace labGUI1
             Properties.Settings.Default.Save();
         }
 
+        //Загрузка сохраненных данных
         private void Form1_Load(object sender, EventArgs e)
         {
             Word1.Text = Properties.Settings.Default.Word1;
             Word2.Text = Properties.Settings.Default.Word2;
         }
 
+
+        //Очистка полей при нажатии на кнопку
         private void button_clear_Click(object sender, EventArgs e)
         {
             Word1.Text = Word1.Text.Remove(0);
             Word2.Text = Word2.Text.Remove(0);
+            label_answer.Visible =false;
         }
     }
 }
